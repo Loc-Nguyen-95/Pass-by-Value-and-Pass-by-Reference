@@ -57,24 +57,21 @@ VD khác
   console.log(result); // 1500
 ```
 
----
-Giải thích
+- ở ví dụ trên chúng ta có thể thấy rằng hàm thực hiện phép nhân nhận 1 biến và thay đổi nó
 
-1.
+[https://scaler.com/topics/images/variable-num.webp]
 
-_hình ảnh_
+- sau đó, chúng ta gán giá trị num vào function. JS sẽ tự động sao chép giá trị biến num vào tmp. vì vậy, num là 1 biến mới được định vị trong bộ nhớ độc lập với num
 
-2.
+[https://scaler.com/topics/images/multiplication-function.webp]
 
-_hình ảnh_
+bây giờ tất cả thay đổi được thực hiện bởi hàm thực hiện phép nhân thì được hoàn thành trực tiếp vào biến tmp, do đó, giá trị của num vẫn không bị ảnh hưởng
 
-3.
+[https://scaler.com/topics/images/variable-temp.webp]
 
-_hình ảnh_
+- điều này xảy ra bởi vì 1 bản sao riêng biệt của num được tạo trong bộ nhớ có tên là tmp và gía trị ban đầu là 30, sau khi tính toán trở thành 1500
 
-4.
-
-_hình ảnh_
+[https://scaler.com/topics/images/tmp.webp]
 
 ## 3. ⚽ Pass by reference 
 
