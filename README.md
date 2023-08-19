@@ -88,6 +88,6 @@ bây giờ tất cả thay đổi được thực hiện bởi hàm thực hiệ
 
 ## 5. 🎁 Tổng kết 
 
-**Source:** (https://www.scaler.com/topics/javascript/pass-by-value-and-pass-by-reference/)
+**Source:** [https://www.scaler.com/topics/javascript/pass-by-value-and-pass-by-reference/](https://www.scaler.com/topics/javascript/pass-by-value-and-pass-by-reference/)
 
 
