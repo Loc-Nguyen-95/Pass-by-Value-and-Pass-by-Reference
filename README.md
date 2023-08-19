@@ -22,6 +22,7 @@
 **chú ý:** khi sử dụng toán tử bằng, có 1 function được gọi (behind the senses) khi pass by value /by reference xong 
 
 **VD**
+
 <img width="717" alt="Screenshot 2023-08-19 at 10 59 23" src="https://github.com/Loc-Nguyen-95/Pass-by-Value-and-Pass-by-Reference/assets/136717443/9ea9ae10-b1a1-4925-a880-72e871f37a40">
 
 ![image01](https://scaler.com/topics/images/pass-by-value.webp)
