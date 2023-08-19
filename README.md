@@ -22,6 +22,7 @@ Chú ý: trong JS, giá trị primative được lưu ở stack, trong khi non-p
 chú ý: khi sử dụng toán tử bằng, có 1 function được gọi (behind the senses) khi pass by value / reference xong 
 
 VD 
+
 !(https://scaler.com/topics/images/pass-by-value.webp)
 
 - khi gán biến có giá trị primative, thì toán tử bằng set 1 khoảng trống (location/address) trong bộ nhớ để lưu data của biến num1 (address 2001)
