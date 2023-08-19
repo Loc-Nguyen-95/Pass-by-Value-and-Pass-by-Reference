@@ -23,7 +23,7 @@ chú ý: khi sử dụng toán tử bằng, có 1 function được gọi (behin
 
 VD 
 
-!(https://scaler.com/topics/images/pass-by-value.webp)
+![image01](https://scaler.com/topics/images/pass-by-value.webp)
 
 - khi gán biến có giá trị primative, thì toán tử bằng set 1 khoảng trống (location/address) trong bộ nhớ để lưu data của biến num1 (address 2001)
 
