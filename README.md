@@ -1,12 +1,12 @@
 # `Pass by Value` & `Pass by Reference`
 
-Trong JS khi 1 function được gọi thì tham số có thể được truyền qua 2 cách: Pass by value và Pass by referance (address). Primative data type ví dụ như string, number, null, undefined, boolean thì được truyền thông qua giá tr trong khi non-primative data type ví dụ như object, array, function thì được truyền bởi reference (sự liên quan) trong JS 
+*Trong JS khi 1 function được gọi thì tham số có thể được truyền qua 2 cách: Pass by value và Pass by referance (address). Primative data type ví dụ như string, number, null, undefined, boolean thì được truyền thông qua giá tr trong khi non-primative data type ví dụ như object, array, function thì được truyền bởi reference (sự liên quan) trong JS*
 
 ## 1. 🥇 Trước hết 
 
 Để hiểu Pass by value và Pass by reference trong JS đầu tiên bạn cần phải hiểu Primative data và Non-primative data
 
-Chú ý: trong JS, giá trị primative được lưu ở stack, trong khi non-primative được lưu ở heap ???
+**Chú ý:** trong JS, giá trị primative được lưu ở stack, trong khi non-primative được lưu ở heap ???
 
 
 ## 2. 🧩 Pass by value 
@@ -19,9 +19,10 @@ Chú ý: trong JS, giá trị primative được lưu ở stack, trong khi non-p
 
 - Trong định nghĩa này, thì toàn tử bằng đóng 1 vai trò lớn. Khi chúng ta tạo 1 biến nó sẽ thông báo là chúng ta đang gán biến giá trị primative hay non-primative và sau đó có hoạt động tương ứng
 
-chú ý: khi sử dụng toán tử bằng, có 1 function được gọi (behind the senses) khi pass by value / reference xong 
+**chú ý:** khi sử dụng toán tử bằng, có 1 function được gọi (behind the senses) khi pass by value /by reference xong 
 
-VD 
+**VD**
+<img width="717" alt="Screenshot 2023-08-19 at 10 59 23" src="https://github.com/Loc-Nguyen-95/Pass-by-Value-and-Pass-by-Reference/assets/136717443/9ea9ae10-b1a1-4925-a880-72e871f37a40">
 
 ![image01](https://scaler.com/topics/images/pass-by-value.webp)
 
