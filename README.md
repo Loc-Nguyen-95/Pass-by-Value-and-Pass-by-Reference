@@ -25,8 +25,6 @@
 
 <img width="717" alt="Screenshot 2023-08-19 at 10 59 23" src="https://github.com/Loc-Nguyen-95/Pass-by-Value-and-Pass-by-Reference/assets/136717443/9ea9ae10-b1a1-4925-a880-72e871f37a40">
 
-![image01](https://scaler.com/topics/images/pass-by-value.webp)
-
 - khi gán biến có giá trị primative, thì toán tử bằng set 1 khoảng trống (location/address) trong bộ nhớ để lưu data của biến num1 (address 2001)
 
 - bây giờ, khi tạo biến num2 (address 2002) và gán nó cho giá trị của biến trước đó num1, toán tử bằng tạo 1 KHOẢNG KHÔNG MỚI ở bộ nhớ nơi mà độc lập với biến trước đó num1 (address 2001) và đặt bản copy của nó (của num1) vào khoảng không mới này. Do đó, điều naỳ đã sao chép giá trị của biến ban đầu, num1, vào 2 vị trí riêng biệt trong bộ nhớ (2001 và 2002)
@@ -62,19 +60,19 @@ VD khác
 
 - ở ví dụ trên chúng ta có thể thấy rằng hàm thực hiện phép nhân nhận 1 biến và thay đổi nó
 
-[https://scaler.com/topics/images/variable-num.webp]
+![image01](https://scaler.com/topics/images/variable-num.webp)
 
 - sau đó, chúng ta gán giá trị num vào function. JS sẽ tự động sao chép giá trị biến num vào tmp. vì vậy, num là 1 biến mới được định vị trong bộ nhớ độc lập với num
 
-[https://scaler.com/topics/images/multiplication-function.webp]
+![image02](https://scaler.com/topics/images/multiplication-function.webp)
 
 bây giờ tất cả thay đổi được thực hiện bởi hàm thực hiện phép nhân thì được hoàn thành trực tiếp vào biến tmp, do đó, giá trị của num vẫn không bị ảnh hưởng
 
-[https://scaler.com/topics/images/variable-temp.webp]
+![image03](https://scaler.com/topics/images/variable-temp.webp)
 
 - điều này xảy ra bởi vì 1 bản sao riêng biệt của num được tạo trong bộ nhớ có tên là tmp và gía trị ban đầu là 30, sau khi tính toán trở thành 1500
 
-[https://scaler.com/topics/images/tmp.webp]
+![image04](https://scaler.com/topics/images/tmp.webp)
 
 ## 3. ⚽ Pass by reference 
 
