@@ -1,6 +1,6 @@
 # `Pass by Value` & `Pass by Reference`
 
-*Trong JS khi 1 function được gọi thì tham số có thể được truyền qua 2 cách: Pass by value và Pass by referance (address). Primative data type ví dụ như string, number, null, undefined, boolean thì được truyền thông qua giá tr trong khi non-primative data type ví dụ như object, array, function thì được truyền bởi reference (sự liên quan) trong JS*
+*Trong JS khi 1 function được gọi thì tham số có thể được truyền qua 2 cách: Pass by value và Pass by referance (address). Primative data type ví dụ như string, number, null, undefined, boolean thì được truyền thông qua giá tr trong khi non-primative data type ví dụ như object, array, function thì được truyền bởi reference (address) trong JS*
 
 ## 1. 🥇 Trước hết 
 
@@ -76,17 +76,97 @@ bây giờ tất cả thay đổi được thực hiện bởi hàm thực hiệ
 
 ## 3. ⚽ Pass by reference 
 
+Không giống như Pass by value, Pass by reference không tạo ra khoảng trống tromng bộ nhớ, thay vào đó, chúng ta truyền reference/address của tham số, có nghĩa là function có thể truy cập giá trị chính thức của biến. Do đó, nếu chúng ta thay đổi giá trị của biến bên trong function thì giá trị thực sẽ bị thay đổi
 
+Nó không tạo ra bản copy, thay vào đó, nó hoạt động dựa trên biến thực nên mọi thay đổi bên trong hàm sẽ làm ảnh hưởng đến biến 
 
+![image05](https://scaler.com/topics/images/pass-by-reference.webp)
 
+Không như Pass by value trong JS, ở đây, khi mà toán tử bằng nhận ra rằng biến obj1 được set bằng với object, nó tạo ra 1 khoảng không bộ nhớ và chỉ obj1 đến 3005 (giả sử đang là 1 địa chỉ). Bây giờ, khi chúng ta tạo 1 biến obj2 và gán nó giá trị của obj1, toán tử bằng nhận định rằng chúng ta đang xử lí 1 non-primitive data type; do đó, nó chỉ đến cùng địa chỉ của obj1. Vì vậy, chúng ta có thể thấy rằng không 1 không gian mới nào được tạo ra, thay vào đó cả 2 biến đều chỉ tới cùng 1 địa chỉ (của obj1)
 
-### 3.1 Pass by reference in Object 
+```swift
+  let obj1 = {website: "Scaler Academy"}
+  let obj2 = obj1;
+  
+  console.log(obj1)     // {website: "Scaler Academy"}
+  console.log(obj2)     // {website: "Scaler Academy"}
+  
+  obj1.website = "Scaler Topics"
+  
+  console.log(obj1)     // {website: "Scaler Topics"}
+  console.log(obj2)     // {website: "Scaler Topics"}
+```
+Trong VD trên, obj1 là 1 object sau đó cho obj2 bằng với obj1
 
-### 3.2 Pass by reference in Array 
+Toán tử bằng nhận diện đây là 1 non-primitive và thay vì tạo ra 1 khoảng trống bộ nhớ mới nó dẫn obj2 vào cùng địa chỉ với obj1. Do đó, khi chúng ta thay đổi giá trị của obj1, thì giá trị của obj2 cũng sẽ thay đổi (vì đang cùng khoảng không bộ nhớ)
+
+### 3.1 Pass by reference in Object (khi trong 1 function)
+
+VD 
+
+```swift
+  let originalObj = {
+  name: "Scaler Academy",
+  rating: 4.5,
+  topic: "JavaScript"
+  };
+  
+  function demo(tmpObj) { 
+    tmpObj.rating = 5; 
+    console.log(tmpObj.rating); 
+  } 
+  
+  console.log(originalObj.rating);    // 4.5
+  demo(originalObj);             // 5
+  console.log(originalObj.rating);    //5
+```
+
+Trong ví dị trên, chúng ta có thể thấy khi thay đổi giá trị của tmpObj, giá trị của orinalObj cũng thay đổi. Vì khi chúng ta gọi function demo và truyền cho nó 1 object, sau đó orinalObj được truyền (gán?) bởi tham chiếu của chính nó (reference), vì vậy biến local tempObj sẽ chỉ đến cùng object mà chúng ta đã định nghĩa ... chính là orinalObj 
+
+![image06](https://scaler.com/topics/images/pass-by-reference-in-object.webp)
+
+Vì vậy trong trường hợp này, chúng ta không xử lí 2 bản copy, thay vào đó có 2 biến mà cùng dẫn đến 1 object, vì vậy mọi thay đổi xảy ra với biến này sẽ ảnh hưởng đến biến kia 
+
+### 3.2 Pass by reference in Array (khi trong 1 function)
+
+```swift
+  let originalArr = ["Scaler", "Academy","is", "the"];
+  
+  function pushArray(tmpArr) { 
+    tmpArr.push('best')
+    console.log(tmpArr); 
+  } 
+  
+  console.log(originalArr);    // ["Scaler", "Academy", "is", "the"]
+  pushArray(originalArr);      // ["Scaler", "Academy", "is", "the", "best"]
+  console.log(originalArr);    // ["Scaler", "Academy", "is", "the", "best"]
+```
+
+Ở đây, khi mà chúng ta cố gắng thêm 1 item mới vào array tempArray, nó cũng sẽ ảnh hưởng đến originalArr. Điều này xảy ra là vì có 2 bản copy của 1 array (chúng ta đang xử lí chỉ 1 array). Biến tempArr tham chiếu (reference) đến cùng 1 array (đó là orinalArr mà chúng ta đã set ban đầu) 
+
+VD trên cho thấy 1 điều rõ ràng rằng, ngay cả object hay array, mọi thay đổi ở tempArr sẽ dẫn đến sự thay đổi tự động của originalArr 
+
+Do đó, chúng ta có thể kết luận bằng cách nói rằng Non-primitive tương tác bằng sự tham chiếu (reference), vì vậy khi chúng ta set giá trị của nó bằng với giá trị của 1 non-primitive khác hay truyền nó vào 1 function, thì chúng sẽ chỉ đến cùng 1 địa chỉ bộ nhớ và bất cứ khi nào chúng ta thay đổi 1 giá trị thì cả 2 sẽ bị thay đổi 
+
+![image07](https://scaler.com/topics/images/pass-by-reference-in-an-array.webp)
+
 
 ## 4. 🎯 Khi nào ?
 
+### 4.1 Khi nào thì dùng Pass by value
+
+Bởi vì pass vy value trong JS sẽ tạo ra 1 bản copy mới của biến, và bất kì thay đổi nào với biến mới sẽ không ảnh hưởng đến biến cũ, vì vậy nó rất hữu ích khi chúng ta muốn theo dõi biến ban đầu và không muốn giá trị của nó bị mất đi hay thay đổi 
+
+### 4.2 Khi nào thì dùng Pass by reference
+
+Khi chúng ta truyền 1 tham số kích thước lớn, thì nên sử dụng pass by reference bởi vì sẽ không tạo ra 1 bản copy nào khác, không làm tốn bộ nhớ  
+
 ## 5. 🎁 Tổng kết 
+
+1. Trong JS, chúng ta có 2 loại dữ liệu là primitive và non-primitive
+2. Pimitive là: number, string, boolean, symbol, undefined và null, trong khi, Non-primitive là object, function, array
+3. Với pass by value, 1 bản copy mới của biến sẽ được tạo và mọi thay đổi đối với biến copy (copied variable) sẽ không làm ảnh hưởng biến chính thức (original variable)
+4. Với pass by reference, chúng ta truyên 1 tham chiếu của tham số thực (actual parameter). Không một bản copy nào tạo ra trong bộ nhớ 
 
 **Source:** [https://www.scaler.com/topics/javascript/pass-by-value-and-pass-by-reference/](https://www.scaler.com/topics/javascript/pass-by-value-and-pass-by-reference/)
 
