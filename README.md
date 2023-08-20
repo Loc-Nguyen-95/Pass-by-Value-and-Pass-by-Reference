@@ -1,13 +1,12 @@
 # `Pass by Value` 🧩 & `Pass by Reference` ⚽
 
-*Trong JS khi 1 function được gọi thì tham số có thể được truyền qua 2 cách: Pass by value và Pass by referance (address). Primative data type ví dụ như string, number, null, undefined, boolean thì được truyền thông qua giá tr trong khi non-primative data type ví dụ như object, array, function thì được truyền bởi reference (address) trong JS*
+*Trong JS khi 1 function được gọi thì tham số có thể được truyền qua 2 cách: Pass by value và Pass by referance (address). Primative data type ví dụ như string, number, null, undefined, boolean thì được truyền thông qua giá trị trong khi non-primative data type ví dụ như object, array, function thì được truyền bởi reference (address) trong JS*
 
-## 1. 🥇 Trước hết 
+## 1. 🥇 Trước hết
 
 Để hiểu Pass by value và Pass by reference trong JS đầu tiên bạn cần phải hiểu Primative data và Non-primative data
 
-**Chú ý:** trong JS, giá trị primative được lưu ở stack, trong khi non-primative được lưu ở heap ???
-
+**Chú ý:** Trong JS, giá trị primative được lưu ở stack, trong khi non-primative được lưu ở **heap** (cấp phát tự động trong JS)
 
 ## 2. 🧩 Pass by value 
 
