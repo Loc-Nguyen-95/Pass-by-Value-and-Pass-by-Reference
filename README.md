@@ -99,7 +99,7 @@ Trong VD trên, obj1 là 1 object sau đó cho obj2 bằng với obj1
 
 Toán tử bằng nhận diện đây là 1 non-primitive và thay vì tạo ra 1 khoảng trống bộ nhớ mới nó dẫn obj2 vào cùng địa chỉ với obj1. Do đó, khi chúng ta thay đổi giá trị của obj1, thì giá trị của obj2 cũng sẽ thay đổi (vì đang cùng khoảng không bộ nhớ)
 
-### 3.1 Pass by reference in Object (khi trong 1 function)
+### 3.1 Pass by reference với Object (khi trong 1 function)
 
 VD 
 
@@ -126,7 +126,7 @@ Trong ví dị trên, chúng ta có thể thấy khi thay đổi giá trị củ
 
 Vì vậy trong trường hợp này, chúng ta không xử lí 2 bản copy, thay vào đó có 2 biến mà cùng dẫn đến 1 object, vì vậy mọi thay đổi xảy ra với biến này sẽ ảnh hưởng đến biến kia 
 
-### 3.2 Pass by reference in Array (khi trong 1 function)
+### 3.2 Pass by reference với Array (khi trong 1 function)
 
 ```swift
   let originalArr = ["Scaler", "Academy","is", "the"];
@@ -141,7 +141,7 @@ Vì vậy trong trường hợp này, chúng ta không xử lí 2 bản copy, th
   console.log(originalArr);    // ["Scaler", "Academy", "is", "the", "best"]
 ```
 
-Ở đây, khi mà chúng ta cố gắng thêm 1 item mới vào array tempArray, nó cũng sẽ ảnh hưởng đến originalArr. Điều này xảy ra là vì có 2 bản copy của 1 array (chúng ta đang xử lí chỉ 1 array). Biến tempArr tham chiếu (reference) đến cùng 1 array (đó là orinalArr mà chúng ta đã set ban đầu) 
+Ở đây, khi mà chúng ta cố gắng thêm 1 item mới vào array tempArray, nó cũng sẽ ảnh hưởng đến originalArr. Điều này xảy ra là vì không có 2 bản copy của 1 array (chúng ta đang xử lí chỉ 1 array). Biến tempArr tham chiếu (reference) đến cùng 1 array (đó là orinalArr mà chúng ta đã set ban đầu) 
 
 VD trên cho thấy 1 điều rõ ràng rằng, ngay cả object hay array, mọi thay đổi ở tempArr sẽ dẫn đến sự thay đổi tự động của originalArr 
 
