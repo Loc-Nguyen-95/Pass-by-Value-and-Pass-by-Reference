@@ -1,4 +1,4 @@
-# `Pass by Value` 🧩 & `Pass by Reference` ⚽
+# `Pass by Value`  & `Pass by Reference` trong 🎭 `Toán tử gán bằng` (Equal operator) hay trong 1 `Function` 
 
 *Trong JS khi 1 function được gọi thì tham số có thể được truyền qua 2 cách: Pass by value và Pass by referance (address). Primative data type ví dụ như string, number, null, undefined, boolean thì được truyền thông qua giá trị trong khi non-primative data type ví dụ như object, array, function thì được truyền bởi reference (address) trong JS*
 
