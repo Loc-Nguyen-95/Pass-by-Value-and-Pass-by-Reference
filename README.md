@@ -75,7 +75,7 @@ Bây giờ tất cả thay đổi được thực hiện bởi hàm thực hiệ
 
 ## 3. ⚽ Pass by reference 
 
-Không giống như Pass by value, Pass by reference không tạo ra khoảng trống tromng bộ nhớ, thay vào đó, chúng ta truyền reference/address của tham số, có nghĩa là function có thể truy cập giá trị chính thức của biến. Do đó, nếu chúng ta thay đổi giá trị của biến bên trong function thì giá trị thực sẽ bị thay đổi
+Không giống như Pass by value, Pass by reference không tạo ra khoảng trống trong bộ nhớ, thay vào đó, chúng ta truyền reference/address của tham số, có nghĩa là function có thể truy cập giá trị chính thức của biến. Do đó, nếu chúng ta thay đổi giá trị của biến bên trong function thì giá trị thực sẽ bị thay đổi
 
 Nó không tạo ra bản copy, thay vào đó, nó hoạt động dựa trên biến thực nên mọi thay đổi bên trong hàm sẽ làm ảnh hưởng đến biến 
 
