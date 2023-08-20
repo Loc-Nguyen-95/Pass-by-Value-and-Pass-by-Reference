@@ -154,7 +154,7 @@ Do đó, chúng ta có thể kết luận bằng cách nói rằng Non-primitive
 
 ### 4.1 Khi nào thì dùng Pass by value
 
-Bởi vì pass vy value trong JS sẽ tạo ra 1 bản copy mới của biến, và bất kì thay đổi nào với biến mới sẽ không ảnh hưởng đến biến cũ, vì vậy nó rất hữu ích khi chúng ta muốn theo dõi biến ban đầu và không muốn giá trị của nó bị mất đi hay thay đổi 
+Bởi vì pass by value trong JS sẽ tạo ra 1 bản copy mới của biến, và bất kì thay đổi nào với biến mới sẽ không ảnh hưởng đến biến cũ, vì vậy nó rất hữu ích khi chúng ta muốn theo dõi biến ban đầu và không muốn giá trị của nó bị mất đi hay thay đổi 
 
 ### 4.2 Khi nào thì dùng Pass by reference
 
@@ -163,9 +163,9 @@ Khi chúng ta truyền 1 tham số kích thước lớn, thì nên sử dụng p
 ## 5. 🎁 Tổng kết 
 
 1. Trong JS, chúng ta có 2 loại dữ liệu là primitive và non-primitive
-2. Pimitive là: number, string, boolean, symbol, undefined và null, trong khi, Non-primitive là object, function, array
+2. Pimitive là: **number**, **string**, **boolean**, **symbol**, **undefined** và **null**, trong khi, Non-primitive là **object**, **function**, **array**
 3. Với pass by value, 1 bản copy mới của biến sẽ được tạo và mọi thay đổi đối với biến copy (copied variable) sẽ không làm ảnh hưởng biến chính thức (original variable)
-4. Với pass by reference, chúng ta truyên 1 tham chiếu của tham số thực (actual parameter). Không một bản copy nào tạo ra trong bộ nhớ 
+4. Với pass by reference, chúng ta truyền 1 tham chiếu của tham số thực (actual parameter). Không một bản copy nào tạo ra trong bộ nhớ 
 
 **Source:** [https://www.scaler.com/topics/javascript/pass-by-value-and-pass-by-reference/](https://www.scaler.com/topics/javascript/pass-by-value-and-pass-by-reference/)
 
